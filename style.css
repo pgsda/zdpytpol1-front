@@ -18,3 +18,13 @@ main p a {
 .fajna-linia {
     text-decoration: underline;
 }
+
+#demo-kontener {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+
+    transform: skew(40deg);
+    transition: background-color 2s;
+}
