@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklep rowerowy</title>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        main p a {
+            color: green;
+            font-weight: bold;
+        }
+        
+        #linia-do-wyroznienia {
+            color: red;
+        }
+
+        .fajna-linia {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Witamy w naszym sklepie rowerowym</h1>
         <h2>Sprawdź nasze produkty</h2>
+        <a href="index.html">Strona Główna</a>
     </header>
     <main>
         <p>
@@ -20,17 +39,17 @@
         </p>
         <ul>
             <li>To jest pierwszy element listy nienumerowanej</li>
-            <li>To jest 2 element listy nienumerowanej</li>
+            <li id="linia-do-wyroznienia">To jest 2 element listy nienumerowanej</li>
         </ul>
         <ol>
-            <li>dadsada</li>
-            <li>dasdsa</li>
+            <li class="fajna-linia">dadsada</li>
+            <li class="fajna-linia">dasdsa</li>
             <li>dasdsa</li>
         </ol>
         <table>
-            <thead>
+            <thead style="font-weight: bold;">
                 <tr>
-                    <td>to jest tabela</td>
+                    <td class="fajna-linia">to jest tabela</td>
                     <td>to jest kolumna 2</td>
                     <td>kol 3</td>
                 </tr>
