@@ -26,6 +26,11 @@ header a {
     text-align: center;
 }
 
+header a:hover {
+    background-color: wheat;
+    color: black;
+}
+
 main, footer {
     padding: 30px;
 }
