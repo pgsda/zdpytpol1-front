@@ -1,0 +1,17 @@
+[
+    {
+        "nazwa": "rower miejski",
+        "adres_obrazu": "",
+        "cena": 888.00
+    },
+    {
+        "nazwa": "rower gorski",
+        "adres_obrazu": "",
+        "cena": 999.99
+    },
+    {
+        "nazwa": "holender",
+        "adres_obrazu": "",
+        "cena": 5000.00
+    }
+]
