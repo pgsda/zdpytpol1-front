@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+<section>
+    <table>
+        <thead>
+            <tr>
+                <td>Imie</td>
+                <td>Nazwisko</td>
+                <td>Komentarz</td>
+                <td>Ocena</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comment in cl %}
+                <td>{{ comment.name }}</td>
+                <td>{{ comment.surname }}</td>
+                <td>{{ comment.content }}</td>
+                <td>{{ comment.grade }}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+<aside>
+</aside>
+{% endblock %}
