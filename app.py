@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -27,4 +27,4 @@ def add_new_comment():
         "grade": request.form['grade']
     }
     comments_list.append(new_comment)
-    return "OK"
+    return redirect('/komentarze')
