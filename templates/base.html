@@ -6,7 +6,7 @@
     <title>Sklep rowerowy</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
-<body onload="getProductsList()">
+<body>
     <header>
         <h1>Sklep rowerowy "Korba"</h1>
         <h2>U nas znajdziesz najlepsze rowery (i korby)</h2>
@@ -18,16 +18,11 @@
         <div style="clear: both;"></div>
     </header>
     <main>
-        <section>
-            Ładowanie produków, proszę czekać...
-        </section>
-        <aside>
-        </aside>
+        {% block main %}{% endblock %}
     </main>
     <div style="clear: both;"></div>
     <footer>
         Wszystkie prawa zastrzezone "KorbaSzop s.c."
     </footer>
-    <script src="produkty.js"></script>
 </body>
 </html>

@@ -1,15 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Hello World"
+def index():
+    return render_template('index.html')
 
-@app.route('/user/<username>')
-def return_username(username):
-    return username
-
-@app.route('/number/<int:nr>')
-def return_number(nr):
-    return str(nr)
+@app.route('/produkty')
+def products():
+    return render_template('produkty.html')
