@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sklep rowerowy</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body onload="getProductsList()">
-    <header>
-        <h1>Sklep rowerowy "Korba"</h1>
-        <h2>U nas znajdziesz najlepsze rowery (i korby)</h2>
-        <nav>
-            <a href="/">Strona Główna</a>
-            <a href="/produkty">Produkty</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
-        <div style="clear: both;"></div>
-    </header>
-    <main>
-        <section>
-            Ładowanie produków, proszę czekać...
-        </section>
-        <aside>
-        </aside>
-    </main>
-    <div style="clear: both;"></div>
-    <footer>
-        Wszystkie prawa zastrzezone "KorbaSzop s.c."
-    </footer>
-    <script src="produkty.js"></script>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block main %}
+<section>
+    Ładowanie produków, proszę czekać...
+</section>
+<aside>
+</aside>
+{% endblock %}
