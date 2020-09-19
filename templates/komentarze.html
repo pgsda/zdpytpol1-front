@@ -12,14 +12,44 @@
         </thead>
         <tbody>
             {% for comment in cl %}
+            <tr>
                 <td>{{ comment.name }}</td>
                 <td>{{ comment.surname }}</td>
                 <td>{{ comment.content }}</td>
                 <td>{{ comment.grade }}</td>
+            </tr>
             {% endfor %}
         </tbody>
     </table>
 </section>
 <aside>
+    <form action="/nowy_komentarz" method="POST">
+        <table>
+            <tr>
+                <td>Imie:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Nazwisko:</td>
+                <td><input type="text" name="surname"></td>
+            </tr>
+            <tr>
+                <td colspan="2">Treść komentarza:</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="content" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Ocena:</td>
+                <td><input type="text" name="grade"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Wyślij"></td>
+            </tr>
+        </table>
+    </form>
 </aside>
 {% endblock %}

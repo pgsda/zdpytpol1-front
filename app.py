@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -17,3 +17,14 @@ def products():
 @app.route('/komentarze')
 def comments():
     return render_template('komentarze.html', cl=comments_list)
+
+@app.route('/nowy_komentarz', methods=["POST"])
+def add_new_comment():
+    new_comment = {
+        "name": request.form['name'],
+        "surname": request.form['surname'],
+        "content": request.form['content'],
+        "grade": request.form['grade']
+    }
+    comments_list.append(new_comment)
+    return "OK"
