@@ -40,7 +40,7 @@ function getProductsList() {
                                                                 //      Pojawi się jedynie tabela z produktami.
     }
 
-    xhttp.open("GET", "/baza_produktow.json", true);    // nawiązujemy połączenie i wysyłamy rządanie
+    xhttp.open("GET", "/static/baza_produktow.json", true);    // nawiązujemy połączenie i wysyłamy rządanie
     xhttp.send();
 }
 
@@ -56,4 +56,10 @@ function addToCart(id) {                                // funkcja dodaje przedm
     currentCart.push(id);                               // do koszyka (tablicy) dodajemy nowy element
 
     localStorage.setItem('cart', JSON.stringify(currentCart));  // zapisujemy koszyk do localStorage - ale najpierw listę zmieniamy do stringa (JSON)
+
+    console.log(localStorage.getItem('cart'));          // debug, sprawdzenie działania koszyka
 }
+
+getProductsList();  // ponieważ skrypt będzie załadowany i wykonany, gdy element body jest już dostępny - wystarczy wywołać funkcję.
+                    //      Nie wywołujemy funkcji w atrybucie onload nalerzącym do tagu body (jak wcześniej), ponieważ tag body jest teraz wspólny
+                    //      dla wszystkich naszych podstron. My zaś chcemy ładować produkty tylko na jednej z nich.
